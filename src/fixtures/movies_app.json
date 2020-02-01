@@ -1,0 +1,22 @@
+[
+{
+    "model": "movies.movie",
+    "pk": 1,
+    "fields": {
+        "title": "Mooga Manasulu",
+        "slug": "mooga-manasulu",
+        "image": "movies/mooga-manasulu/Mooga_ManasulugF1.jpg",
+        "trailer_url": "https://www.youtube.com/watch?v=Mh3mGNW4lvc"
+    }
+},
+{
+    "model": "movies.movie",
+    "pk": 2,
+    "fields": {
+        "title": "Khaidi",
+        "slug": "khaidi",
+        "image": "movies/khaidi/Khaidi5mW.jpg",
+        "trailer_url": "https://www.youtube.com/watch?v=WX27P-GGSss"
+    }
+}
+]
