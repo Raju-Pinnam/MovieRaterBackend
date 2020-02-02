@@ -17,6 +17,18 @@ class Movie(models.Model):
     def get_absolute_url(self):
         return reverse('movies:detail', kwargs={'slug': self.slug})
 
+    def get_num_of_ratings(self):
+        return self.rating_set.all().count()
+
+    def get_avg_rating(self):
+        avg = 0
+        if self.get_num_of_ratings() > 0:
+            total_ratings = 0
+            for rate_obj in self.rating_set.all():
+                total_ratings += rate_obj.stars
+            avg = total_ratings / self.get_num_of_ratings()
+        return avg
+
 
 def pre_save_funcs(sender, instance, *args, **kwargs):
     if instance.slug is None:
